@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div>
+        <form method="post" th:object="${tests0}" th:action="@{/salvar}" enctype="multipart/form-data">
+            Nome: <input class="form-control" type="text" name="nome" th:field="*{nome}"> <br />
+            Descrição: <input class="form-control" type="text" name="marca" th:field="*{descricao}"> <br />
+            <textarea placeholder="Informe uma breve descrição que deve conter 20 caracteres no minimo ou a pagina retornara para cadastro"></textarea>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
